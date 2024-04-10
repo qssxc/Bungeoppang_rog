@@ -20,10 +20,14 @@ public class ladle : MonoBehaviour
     }
     public void Pat_click()
     {
-        now_matter = 0;
+        now_matter = 2;
     }
     public void Flour_click()
     {
         now_matter = 1;
+    }
+    public void metla_click()
+    {
+        now_matter = 0;
     }
 }
