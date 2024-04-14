@@ -13,6 +13,9 @@ public class frame : MonoBehaviour ,IPointerDownHandler
     private Sprite metalcolor;
     private Sprite flourcolor;
     private Sprite patcolor;
+    public Image Player;
+    private Sprite IdlePlayer;
+    private Sprite playerAttack;
     private Sprite r_flourcolor;
     private int bake; //얼마나 구워졌는지 확인용
     private bool now_bake = false; //틀에 쟤료를 붇고 건지기까지 참
@@ -24,9 +27,11 @@ public class frame : MonoBehaviour ,IPointerDownHandler
        ladle = GameObject.Find("ladle");
        Imagemanager = GameObject.Find("Imagemanager");
         flourcolor = Imagemanager.GetComponent<Imagemanager>().flourcolor;
+        playerAttack = Imagemanager.GetComponent<Imagemanager>().AttackPlayer;
         metalcolor = Imagemanager.GetComponent<Imagemanager>().metalcolor;
         patcolor = Imagemanager.GetComponent<Imagemanager>().patcolor;
         r_flourcolor = Imagemanager.GetComponent<Imagemanager>().r_flourcolor;
+        IdlePlayer = Imagemanager.GetComponent<Imagemanager>().IdlePlayer;
         image =GetComponent<Image>();
        image.sprite = metalcolor;
     }
@@ -45,7 +50,14 @@ public class frame : MonoBehaviour ,IPointerDownHandler
             StartCoroutine(baking());
         }
     }
+    IEnumerator PlayerAttackAni()
+    {
+        Player.sprite = playerAttack;
+        Debug.Log("공격!");
+        yield return new WaitForSeconds(1);
+        Player.sprite = IdlePlayer;
 
+    }
     public void OnPointerDown(PointerEventData eventData)
     {
         //좌클릭시
@@ -101,7 +113,8 @@ public class frame : MonoBehaviour ,IPointerDownHandler
                 reverse = false;
                 now_bake = false;
                 image.sprite = metalcolor;
-            }           
+                StartCoroutine(PlayerAttackAni());
+            }
         }
     }
 }

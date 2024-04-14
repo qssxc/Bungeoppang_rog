@@ -15,4 +15,8 @@ public class Imagemanager : MonoBehaviour
     public Sprite r_flourcolor;
     [SerializeField]
     public Sprite r_patcolor;
+    [SerializeField]
+    public Sprite AttackPlayer;
+    [SerializeField]
+    public Sprite IdlePlayer;
 }
