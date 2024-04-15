@@ -2150,9 +2150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   metalcolor: {fileID: 21300000, guid: 7505e5ed01728bb409e7011a3e5ede55, type: 3}
-  flourcolor: {fileID: 21300000, guid: a6f9b9c57c28912458902bd6744b6dc2, type: 3}
-  patcolor: {fileID: 21300000, guid: 7173a4f54a7b39341aa42eb131c287e1, type: 3}
-  r_flourcolor: {fileID: 21300000, guid: 1dc4aa9793ef0304ba2176d353c4f6d2, type: 3}
+  flourcolor: {fileID: 21300000, guid: 9ecf7f6a87f34074b97f7394cd3384ff, type: 3}
+  patcolor: {fileID: 21300000, guid: bddcc13b88ff5254bbfdfb5ace051592, type: 3}
+  r_flourcolor: {fileID: 21300000, guid: b6673b77bf3de9c4aa0e65df79c19908, type: 3}
   r_patcolor: {fileID: 21300000, guid: 6af1a2ce70fc3d84298852154a2ba9db, type: 3}
 --- !u!1 &1978169726
 GameObject:
